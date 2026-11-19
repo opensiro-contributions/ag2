@@ -1,52 +1,54 @@
-# AG2 — task-board coordination roadmap (OpenSiro plan-only)
+# AG2 — independent Task/Network on-top rerun (Human)
 
-**Status:** PLAN_ONLY · architecture decision: **NO_GO for a separate VSM S3 constructor now** · public fork GitHub Issue: **NOT PUBLISHED**.
+**PLAN_ONLY · proposal-stage NO_GO · research NO_USEFUL_CHANGE · internal .opensiro sync, NOT PUBLISHED.**
 
-## Why OpenSiro
+**Target transition:** NO_QUALIFIED_C_TARGET
+**Proposal-stage decision:** NO_GO
+**Research disposition:** NO_USEFUL_CHANGE
 
-OpenSiro tests whether a reusable, VSM-informed organizational specification can standardize agent-harness development and lower its total implementation, integration, review and maintenance cost. This is an **unmeasured hypothesis**, not a statement that AG2 needs VSM or that cost savings are proven. Prefer a smaller original-native solution when it solves the real user task.
+[roadmap.md](roadmap.md) · [constructor-sufficiency.md](constructor-sufficiency.md)
 
-## Accepted VSM starting point — historical, not a current-HEAD grade
+## Why OpenSiro and historic accepted assessment
 
-[Accepted Index assessment](https://github.com/opensiro/vsm-harness-index/blob/34e11ec4dd52e1ba3ee0111d8bca73f13918f54f/assessments/ag/ag2.md), reviewed **2026-09-18**, original `review_ref` `3211bb19832049e7abe1a5742b6d177274bff723`, Profile **0.2.2**, Methodology **0.3.1**:
+OpenSiro tests whether VSM-informed function-specific integration can lower the real task engineering burden; benefit is a falsifiable hypothesis, not a defect attributed to AG2.
 
-| Function | Grade | Meaning and assessment consequence |
+[Included Index assessment](https://github.com/opensiro/vsm-harness-index/blob/9fe281441f1820014dda5da8fff70e5fb1c9b246/assessments/ag/ag2.md) for AG2, blob cc442691abb833236f48f30206580bb17c258f5c, reviewed 2026-09-18 at 3211bb19832049e7abe1a5742b6d177274bff723 under Profile 0.2.2 and methodology 0.3.1; original examined at [6d2dd8bab8af873ea29ed759cfacb572466d925e](https://github.com/ag2ai/ag2/commit/6d2dd8bab8af873ea29ed759cfacb572466d925e). The accepted state is historical and is not reassessed by this sync.
+
+| Function and plain meaning | Historical accepted state | Source ownership and why not chosen |
 | --- | --- | --- |
-| S1 — Operations | **A** | The AG2 model/tool agent owns execution choices; no mandatory C work. |
-| S2 — Coordination | **C** | The composable first-party Network discussion protocol regulates participant turns; no mandatory replacement. |
-| S3 — Current control | **—** | A first-party whole-organization commitments/resources decision loop was not established at the reviewed ref. |
-| S3* — Complementary audit | **—** | Hub logs and listeners did not establish an independent audit-return path. |
-| S4 — Adaptation | **—** | No separate prospective environmental adaptation loop was established. |
-| S5 — Policy and identity | **—** | Network governance remains developer/parent-defined rather than autonomously closed. |
+| **S1 · Operations** | A | Agents autonomously perform model/tool work and return Task results. No new C required |
+| **S2 · Coordination** | C | Network discussion already supplies composable turn regulation and feedback; one-next board is an original native feature discussion |
+| **S3 · Current management** | — | No current independent resource/priority controller is established, but no evidenced distinct extra operator need beyond host-targeted Task routing and #3679 |
+| **S3* · Complementary audit** | — | TaskMirror/events are not an independent corrective audit owner |
+| **S4 · Prospective adaptation** | — | No sourced external-future decision/return target |
+| **S5 · Identity/policy** | — | Parent/developer controls authority; no new identity actor justified |
 
-The original now has newer code at [`f3943efb5546c4dbaecaf08706eb2bc16e56c602`](https://github.com/ag2ai/ag2/commit/f3943efb5546c4dbaecaf08706eb2bc16e56c602); this vector is **historical**. Because the last accepted review was over 30 days ago, recommend a source-pinned Index re-assessment before asserting any current grade change. Re-assessment is advisory, not a roadmap blocking gate.
+## Operator task
 
-## Real user outcome and native work
+The observed request in [original Issue #3679](https://github.com/ag2ai/ag2/issues/3679) is that a four-agent pipeline wakes ONLY its next relevant agent rather than every participant, while preserving correct terminal Task ownership and avoiding unneeded tokens. This is legitimate native work. It does **not** imply another fully autonomous VSM S3 controller is useful. The easiest alternative is application-owned targeted dispatch using existing Hub/Task primitives.
 
-[AG2 issue #3679](https://github.com/ag2ai/ag2/issues/3679) requests a shared task board that wakes only the agent named `next`, avoiding irrelevant agent invocations and context delivery. AG2 currently supplies a [per-agent Task lifecycle](https://github.com/ag2ai/ag2/blob/f3943efb5546c4dbaecaf08706eb2bc16e56c602/ag2/task.py) and [Task documentation](https://github.com/ag2ai/ag2/blob/f3943efb5546c4dbaecaf08706eb2bc16e56c602/website/docs/user-guide/tasks.mdx) that expressly leave task assignment/scheduling to owners. [PR #3576](https://github.com/ag2ai/ag2/pull/3576) was merged and unified task lifecycle; [PR #3466](https://github.com/ag2ai/ag2/pull/3466) is still open on per-batch tool concurrency, **not** a cross-agent board. No board implementation or independent S3 actor has been established by this investigation.
+## Original-native Track A and independent Track B
 
-A task board's `next` field and deterministic wake-up alone are **not** autonomous S3 current control: they do not establish who lawfully chooses cross-agent priorities/capacity, how that choice changes later agent work, or how feedback returns. Nor does absence of historical S3 force a new feature.
+| Track A | Track B / cheapest additional work | Result |
+| --- | --- | --- |
+| [Task](https://github.com/ag2ai/ag2/blob/6d2dd8bab8af873ea29ed759cfacb572466d925e/ag2/task.py) agent-owned events and checkpoints; Network targeted delivery, TaskMirror; original #3679 already asks for board and next wake | Reuse targeted host routing or help original owner's board with terminal-safe Task receipts | Not an independent S3 construction |
+| Merged original [#3576](https://github.com/ag2ai/ag2/pull/3576), [#2775](https://github.com/ag2ai/ag2/pull/2775), [#3128](https://github.com/ag2ai/ag2/pull/3128); open [#3466](https://github.com/ag2ai/ag2/pull/3466) governs per-response tool bursts | Optional distributed revisioned/idempotent wake adapter | No observed wrong/lost/double wake remaining after native options; NOT_EVIDENCED |
+| Original #3679 four-agent benchmark proposed | Compare unchanged host targeting, minimal board and only then conditional adapter | Native counterfactual must fail before another first-party constructor is justified |
 
-## Priority and minimum sufficient decision
+## Priority and independent decision
 
-- **P0 — NOT ADMITTED:** Do **not** open a separate VSM S3=C controller implementation. Current evidence establishes a concrete coordination-efficiency request, but not a distinct whole-organization S3 decision need. Proposed C ports in the [AI/developer contract](constructor-sufficiency.md) remain an unapproved hypothesis.
-- **P1 — original-native route:** Reuse **#3679**, not a duplicate original Issue. Before any implementation mandate, compare a fixed four-agent pipeline using current Task+Network versus board+single-`next` dispatch. Count unnecessary wake-ups, model tokens, correct terminal task outcomes and total maintenance effort. Preserve existing agent ownership, auth, events and cancellation. A measured win could justify a small AG2-native board proposal independently of VSM grades.
-- **P2 — NONE:** No separate S3*, S4, S5 or parent-autonomy mode is proposed without a new material first-party need.
+**P0:** NO_QUALIFIED_C_TARGET — scoped NO_GO for separate whole-network S3=C managerial service or duplicate one-next adapter.
 
-**Minimum passing native result if the maintainer selects #3679 later:** exact one-agent wake behavior, no unrelated listener wake, authorization-safe transition, correct cancellation/terminal receipts, no regression in ordinary Task runs, and a reproducible baseline comparison. These tests are **proposed, not executed**. The user task may be delivered with no S3 grade change.
+**P1:** Native owner-led issue #3679; benchmark selective wake, correct Task terminals, unauthorized/stale/duplicate wake and total operating/engineering cost.
 
-## Independent choices and limits
+**P2:** NONE.
 
-1. **Original-native:** Reuse #3679 and maintainer decisions; do not publish a competing Issue/PR automatically.
-2. **Profile/Skills feedback:** Only if actual source evidence demonstrates a misclassified function or unclear threshold; no proposed semantic change now.
-3. **Optional domain fork:** A separately authorized, bounded board+manager experiment only if a real cross-agent discretionary-control task emerges and a simpler native alternative fails.
+A real S3=C proposal would need whole-current commitments snapshot, independently developer-composed autonomous decision owner, lawful alternative actions, enforced dispatch and later Task feedback. The missing historical grade is not evidence those new parts would help this use case.
 
-AG2 is Apache-2.0. Its [AI contribution policy](https://github.com/ag2ai/ag2/blob/f3943efb5546c4dbaecaf08706eb2bc16e56c602/.github/AI_POLICY.md) welcomes reviewed AI assistance and requires a contributor to certify PR rights under its CLA; no personal CLA consent is presumed. This plan publishes no code or message to AG2.
+**Falsifier and reentry:** An actual cross-process double/lost wake not addressed by targeted native handlers and the minimal original board, plus a testable distinct organizational controller need, could justify reconsideration. No new code or benchmark was executed in the independent study.
 
-## Cost and final decision
+## Rights, chronology and delivery
 
-**Cost: NOT_MEASURED.** Match implementation, integration, testing, review, token and maintenance cost for equivalent outcomes before claiming savings.
+[Source comment for independent 2026-11-19 review](https://github.com/opensiro/upstream/issues/58#issuecomment-7012239664) reported NO_GO and READ_ONLY because the then-fork owner state was PAUSE/DORMANT. The owner has since switched this matching fork to ACTIVE/ALLOW, enabling **this internal-only synchronization**. The preceding 2026-11-18 research remains in Git history, not overwritten as a claimed fresh assessment. No original-project or public-fork Issue/PR approved, no Index grades changed.
 
-**Final decision: NO_GO** for a *separate VSM-derived S3 controller now*. **Next:** keep source-native #3679 as the sole original-project lead; re-evaluate only if measured benefit and a genuine autonomous whole-system priority/capacity decision need emerge. This is a closed research verdict, not `NEEDS_EVIDENCE` awaiting another generic continuation.
-
-**Fork-local case:** [README](README.md) · [AI/developer evidence and constructor sufficiency](constructor-sufficiency.md) · [pinned receipt](roadmap.md). Product code: unchanged. Public fork GitHub Issue: **NOT PUBLISHED — requires separate exact current-conversation approval**. Original Issue/PR: **NOT PUBLISHED by OpenSiro**.
+[Canonical receipt](roadmap.md) and [AI handoff](constructor-sufficiency.md) keep exact pins, tests and publication/authority limits.

@@ -1,66 +1,48 @@
-# AG2 — AI/developer evidence and conditional constructor contract
+# AG2 — independent S3 construction sufficiency and native counterfactual (AI)
 
-**Companion to:** [Human roadmap Issue](issue.md). **Status: PLAN_ONLY / NO_GO** for a separate S3=C intervention; no implementation authorization.
+**PLAN_ONLY · proposal-stage NO_GO · research NO_USEFUL_CHANGE · NOT IMPLEMENTED / NOT PUBLISHED**
 
-## Function scope, boundary and historical starting vector
+**Target transition:** NO_QUALIFIED_C_TARGET
+**Proposal-stage decision:** NO_GO
+**Research disposition:** NO_USEFUL_CHANGE
 
-System in focus: AG2 first-party Agent and opt-in Network Hub at [accepted Index ref](https://github.com/opensiro/vsm-harness-index/blob/34e11ec4dd52e1ba3ee0111d8bca73f13918f54f/assessments/ag/ag2.md) `3211bb19832049e7abe1a5742b6d177274bff723`. Current original main: [`f3943efb5546c4dbaecaf08706eb2bc16e56c602`](https://github.com/ag2ai/ag2/commit/f3943efb5546c4dbaecaf08706eb2bc16e56c602).
+[issue.md](issue.md) · [roadmap.md](roadmap.md).
 
-**Accepted historical vector (2026-09-18): S1=A, S2=C, S3=—, S3*=—, S4=—, S5=—.** Profile 0.2.2; Methodology 0.3.1. S2=C is already a supported composable turn-regulation path; this route does **not** require its replacement. No source change/Issue upgrades the accepted assessment.
+## Function-specific six-function screen
 
-## 1. Real counterfactual and existing current code
+System in focus: first-party AG2 Agent and optional Network Hub at original 6d2dd8bab8af873ea29ed759cfacb572466d925e, not AG2 Classic, tenant applications or downstream schedulers. Historical six-function state and associated exclusion explanations are in the Human table and [roadmap.md](roadmap.md). S1 model/tool actor already autonomously executes work; S2 discussion protocol is a function-specific coordination C. S3 candidate would require organizational current-work discretion, not a fixed routing rule. S3* listener, S4 future analysis and S5 identity cannot be counted from Task lifecycle, telemetry or human parent authority.
 
-Operator counterfactual from [original issue #3679](https://github.com/ag2ai/ag2/issues/3679): a four-agent pipeline should not invoke idle/non-next agents or send each the full status stream. The cheapest solution is to preserve agent-owned Tasks and supply a small optional single-next task board, not a new organization-level management service.
+## Track A: actual source, Issue/PR and source-native baseline
 
-| First-party mechanism | Current provenance and status | Ownership conclusion |
-| --- | --- | --- |
-| `ag2/task.py` and Task docs | [Source at original HEAD](https://github.com/ag2ai/ag2/blob/f3943efb5546c4dbaecaf08706eb2bc16e56c602/ag2/task.py); Tasks emit start/progress/terminal, checkpoint and are explicitly owner-scheduled | **SHIPPED** Task lifecycle, **not** shared task assignment |
-| Ordinary and delegated Task lifecycle | [PR #3576](https://github.com/ag2ai/ag2/pull/3576) **MERGED** 2026-11-03 | Reuse existing receipts, do not recreate Task |
-| Network Hub / protocols | [PR #2775](https://github.com/ag2ai/ag2/pull/2775) **MERGED**; [accepted S2=C evidence](https://github.com/opensiro/vsm-harness-index/blob/34e11ec4dd52e1ba3ee0111d8bca73f13918f54f/assessments/ag/ag2.md) | Existing coordination and governance; **not** a proven first-party S3 controller |
-| Shared board / single-next wake | [Issue #3679](https://github.com/ag2ai/ag2/issues/3679) **OPEN**, with no source-proven implementation in this check | **ISSUE ONLY**, not SHIPPED C |
-| Concurrent tool-call cap | [PR #3466](https://github.com/ag2ai/ag2/pull/3466) **OPEN**, head `81aef1444d0e55ae242591b6b4fae2e43b294599` | Different per-agent tool pressure, not multi-agent task priorities |
-| Deterministic governance middleware | [PR #3128](https://github.com/ag2ai/ag2/pull/3128) **MERGED** | Policy enforcement support, not an autonomous resource allocator |
+- Shipped first-party [Task](https://github.com/ag2ai/ag2/blob/6d2dd8bab8af873ea29ed759cfacb572466d925e/ag2/task.py) emits started/progress/completed/failed/cancelled and checkpoints; scheduling belongs to calling agent/application.
+- [Network TaskMirror]( https://github.com/ag2ai/ag2/blob/6d2dd8bab8af873ea29ed759cfacb572466d925e/website/docs/user-guide/network/task_observation.mdx ) returns Task activity; [AgentClient targeted envelopes](https://github.com/ag2ai/ag2/blob/6d2dd8bab8af873ea29ed759cfacb572466d925e/website/docs/user-guide/network/agent_clients.mdx) already expose owner-scoped sends and callbacks.
+- [Original #3679](https://github.com/ag2ai/ag2/issues/3679) OPEN requests task board, status, next-only wake, scoped inbox and four-agent comparison. This is the exact owner-native feature, NOT shipped.
+- [#3576](https://github.com/ag2ai/ag2/pull/3576) MERGED Task lifecycle, [#2775](https://github.com/ag2ai/ag2/pull/2775) MERGED Network protocols, [#3128](https://github.com/ag2ai/ag2/pull/3128) MERGED middleware. [#3466](https://github.com/ag2ai/ag2/pull/3466) OPEN @81aef1444d0e55ae242591b6b4fae2e43b294599 is per-tool concurrency and not shared agent assignment.
+- Cheapest current native comparator: application-owned targeted AgentClient / single-next host logic using existing Task returns. No source-supported claim it is always cheaper or sufficient; experiment NOT_RUN.
 
-Search for board/task scheduling PRs did not identify an accepted competing implementation. This bounded search is **not** a claim that every historical branch or downstream plugin has been tested. AG2 Classic is outside this AG2 v1 first-party boundary.
+## Track B: on-top options independently compared in original 2026-11-19 study
 
-## 2. Conditional S3 C-target sufficiency (NOT ADMITTED)
+| Candidate | Exact on-top source interface | Claimed incremental difference | Why no separate C target now |
+| --- | --- | --- | --- |
+| Reuse existing host | Existing targeted Network sends, Task events | Avoid broad room wake without code patch | No new first-party decision actor, but solves simplest task |
+| Integrate original #3679 | Optional TaskBoard next/status inbox + Task terminal linkage | Durable shared source-of-truth and strict one-next wake | #3679 already owns this user outcome; no OpenSiro-specific separate delta |
+| Adjacent cross-process retry adapter | Conditional versioned/idempotent next activation and TaskMirror receipts | Avoid duplicate/lost wake after crash/retry | No observed residual incident, no demonstrated new parent authority/return need |
+| Autonomous S3 actor | Parent-capped whole-current task/capacity snapshot, options, composed managerial choice, daemon/Hub-side dispatch, feedback | Current priority/commitment decision beyond next-only static scheduling | Not established as an operator request or as distinct from original owner's task board/host |
 
-A first-party `TaskBoard` as described in #3679 would improve task-level coordination, but `next` chosen by the caller is a deterministic dispatch parameter. To test **S3=C**, a *separate demonstrated user task* must require an organizational actor to decide current capacity, priority and commitments, not merely execute a configured queue. Only then could a first-party, developer-composable path expose the following complete chain:
+## P0 / P1 / P2 and falsifiable tests
 
-| Logical port (conditional) | Required current-work decision and return | Existing vs missing |
-| --- | --- | --- |
-| **A: CurrentWorkSnapshot** | Observed cross-agent tasks, status, owner, commitments, capacity, revision and trust boundaries | Task events / Hub observations **SHIPPED** in part; coherent board scope **NOT SHIPPED** |
-| **B: EligibleInterventions** | Versioned lawful choices: assign, defer, re-prioritize, hold, cancel, with quota and invariant checks | No first-party organization-level options demonstrated |
-| **C: CurrentWorkDecisionPort** | Developer composes a real autonomous decision actor choosing among those options under valid delegated authority | **MISSING** S3-specific actor/decision contract |
-| **D: DispatchAndAuthorityBridge** | Validate actor identity, revision, task ownership, resource rights and apply the chosen change to supported AG2 Task/Network dispatch | Task/Network execution **SHIPPED**; bound decision-to-actual-next-work bridge **MISSING** |
-| **E: ActualWorkReceipt** | Evidence that the selected worker ran or was denied, changed later Task state and returned outcome to the same current controller | Task terminal events **SHIPPED**; organization-level controller feedback **MISSING** |
+**P0 NO_QUALIFIED_C_TARGET / NO_GO.** Do not write a duplicate VSM management service or release another Issue about #3679. **P1** is owner-led original #3679 benchmark and possible native adaptation, not a current OpenSiro feature authorization. **P2 NONE.**
 
-**Conditional sufficiency rule:** only the full native A+B+C+D+E path, actually implemented and tested in standard first-party modes, could be proposed for a later independent Index review of S3=C. An event hook, static `next`, paper contract, outsider worker, green mock test, or new Issue cannot establish C. Respect parent/developer policy, no new S5 rights. **Materiality gate fails now** because the independently useful whole-system discretionary choice has not been demonstrated.
+**Positive benchmark (NOT_RUN):** four-agent research, write, review, integrate under identical tools/inputs: host selective routing, proposed original TaskBoard, then any candidate adapter only if baseline fails. Count exact agent wakeups, unaffected watcher silence, proper terminal Task outcomes, invocation/token/latency totals and maintenance effort.
 
-## 3. Priorities identical to Human decision
+**Negative (NOT_RUN):** unauthorized writer, stale status revision, crash/retry, duplicate events or cancellation must not produce extra invocation or cross-principal access.
 
-- **P0: NOT ADMITTED** — no independent S3 constructor coding.
-- **P1:** baseline and possible native #3679 board evaluation; no publication, no mandate to implement. Source-native task lifecycle and network semantics remain in charge.
-- **P2: NONE** — no speculative S3*, S4 or S5 expansion.
+**S3 constructor gate:** if an independent actor is ever proposed, require two distinct lawful whole-current capacity choices that alter later actual AG2 work under a genuine first-party authority and return. Without that, the feature is S2/transport/Task bookkeeping, not S3=C.
 
-## 4. Illustrative native tests and rejection
+**Falsifier:** host targeted route or native #3679 meets selective-wake objective with correct task status at lower/equal integration/operation cost; then separate S3 C lacks a material target. Reopen only on a reproducible materially unmatched current-management problem and proof of source-native rights.
 
-These are **proposed cases, not executed** and do not constitute an implementation checklist to ship a controller now.
+## Historical provenance and permission
 
-| Source-native scenario | Expected observable result | Reject |
-| --- | --- | --- |
-| Four-agent fixed pipeline, existing Task/Network baseline | Record exact invocations, tokens, terminal results and maintenance steps | No matched baseline |
-| Optional board, task transition naming one next worker | Exactly the intended eligible agent receives the dispatch; others remain unwoken | Broad wake, duplicate effects or broken Task terminal |
-| Stale owner/revision or unauthorized reassignment | No illegal dispatch; explicit denial result and unchanged task ownership | Caller silently overrides right or terminal state |
-| If future S3 controller is justified, two lawful manager choices under identical snapshot | Different permitted downstream task allocations, both with returned actual Task results | Hardcoded scheduler owns the decisive decision, or receipt does not return |
-| No S3 actor configured | Ordinary AG2 Task/Network behavior remains supported | Invented autonomous management behavior or default policy escalation |
+The original read-only outcome was reported in [Upstream #58 dated comment](https://github.com/opensiro/upstream/issues/58#issuecomment-7012239664) with 2026-11-19 original 6d2dd8bab8af873ea29ed759cfacb572466d925e; it had PAUSE/DORMANT at that time and did not edit fork metadata. The previous 2026-11-18 [AG2 case](https://github.com/opensiro-contributions/ag2/blob/3c4d4ba7f3322670cc8c905f1ccaf9cd31a2eb40/.opensiro/issues/task-board-coordination-20261118/roadmap.md) remains in Git history. Current fork ACTIVE/ALLOW is new owner attribution; this sync records the same independent NO_GO but does NOT assert fresh v0.18 independent reasoning or test execution.
 
-Technical validation must be performed under AG2's then-current source-native pytest/ruff/mypy conventions and real public API, with failing behavior and exact commands recorded. No tests are claimed as executed by this plan.
-
-## 5. Evidence ownership, falsification, alternatives and handoff
-
-**Falsifiers for a separate S3 proposal:** current native means already meet the user goal; board does not lower unnecessary invocations; no independently necessary priority/capacity discretion; no lawful supported first-party actor/dispatch/feedback; or maintenance burden exceeds benefit. Any one is reason not to implement the S3 construction.
-
-**Original-native alternative:** follow [#3679](https://github.com/ag2ai/ag2/issues/3679), preserve Task identity, use a small optional board and deterministic wake if a measured benefit exists. **Profile/Skills:** amend only from a source-backed semantic/procedure error. **Domain fork:** separately authorized experiment with exact boundary, no upstream adoption implication.
-
-**Rights:** [Apache-2.0](https://github.com/ag2ai/ag2/blob/f3943efb5546c4dbaecaf08706eb2bc16e56c602/LICENSE); [AI policy](https://github.com/ag2ai/ag2/blob/f3943efb5546c4dbaecaf08706eb2bc16e56c602/.github/AI_POLICY.md) and contributor CLA apply to later PRs. Public fork Issue/PR and original maintainer interactions each require their own exact owner approval. **Cost: NOT_MEASURED**. **Decision: NO_GO / NO_USEFUL_CHANGE for S3 today**. Re-assess accepted >30-day-old Index grades before confident current-grade claims.
+Original Apache-2.0/AI policy and CLA certification apply to any actual external PR. No native test, product source edit, approved public Issue/PR, external original communication, new Index grade or cost result.
