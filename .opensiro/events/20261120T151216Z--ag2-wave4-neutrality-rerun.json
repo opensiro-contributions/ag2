@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "20261120T151216Z--ag2-wave4-neutrality-rerun",
+  "recorded_at": "2026-11-20T15:12:16Z",
+  "actor": "OpenSiro assistant — owner-directed #58 Wave 4 neutral independent re-run",
+  "kind": "CHECKPOINT",
+  "decision": "AG2_WAVE4_V018_NEUTRAL_PROPOSAL_GO_NEEDS_EVIDENCE",
+  "source_research_url": "https://github.com/opensiro/upstream/issues/58#issuecomment-7042841496",
+  "claim_url": "https://github.com/opensiro/upstream/issues/58#issuecomment-7042743786",
+  "protocol_ref": "28ea2cce06b517bc4550dceddb00210b1e0dc85c",
+  "original_repository": "ag2ai/ag2",
+  "original_head": "6d2dd8bab8af873ea29ed759cfacb572466d925e",
+  "index_head": "dadcf25d6e7ffcbdb298e476a249b8be187c53b4",
+  "assessment_blob_sha": "cc442691abb833236f48f30206580bb17c258f5c",
+  "case_id": "task-board-coordination-20261118",
+  "target_transition": "S3=— -> S3=C",
+  "proposal_stage_decision": "GO",
+  "research_disposition": "NEEDS_EVIDENCE",
+  "validation_state": "NOT_RUN",
+  "case_structural_validation": {
+    "result": "PASS",
+    "script": "opensiro/upstream/scripts/validate_capability_roadmap.py",
+    "script_commit": "28ea2cce06b517bc4550dceddb00210b1e0dc85c",
+    "scope": "STRUCTURAL_ONLY"
+  },
+  "historical_case_commit": "f33ff627c9d9b405c914ec78e63fc28d04f96282",
+  "historical_comparison": "same full S3 manager evaluation object: historical NO_GO (unmeasured added usefulness as veto) -> GO (architecturally complete neutrality design); narrow board alone remains not S3",
+  "cost_status": "NOT_MEASURED",
+  "publication": "NOT_PUBLISHED",
+  "product_implementation": "NOT_IMPLEMENTED",
+  "owner_state_before": {
+    "attention": "ACTIVE",
+    "owner_control": "ALLOW",
+    "last_event_id": "20261119T185048Z--ag2-independent-rerun-meta-reconcile"
+  },
+  "next_action": "Internal roadmap PR/readback; no external communication without exact consent"
+}

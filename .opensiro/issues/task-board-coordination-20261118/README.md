@@ -1,11 +1,13 @@
-# AG2 — source-pinned independent roadmap re-run synchronized
+# AG2 — Wave 4 v0.18.0 assessment-neutral S3 roadmap proposal
 
-**Current record:** 2026-11-19 independent AG2 S1/S2/S3/S3*/S4/S5 and Track A/B re-run, **NO_GO / NO_USEFUL_CHANGE** to an additional whole-network S3=C controller or duplicate selective-wake adapter. Historical accepted S1=A · S2=C · S3=— · S3*=— · S4=— · S5=— unchanged. Proposed comparator / native work is [AG2 Issue #3679](https://github.com/ag2ai/ag2/issues/3679), not an OpenSiro external feature publication.
+**Current independent proposal:** `S3=— -> S3=C` · **GO / NEEDS_EVIDENCE** · PLAN_ONLY · NOT IMPLEMENTED · NOT PUBLISHED.
 
-- [Human issue.md](issue.md) — the operator task, full historical six-function explanation, bounded NO_GO.
-- [AI constructor-sufficiency.md](constructor-sufficiency.md) — source-native Track A/B, alternate actor/authority/effect/feedback requirements and falsifiers.
-- [Canonical roadmap.md](roadmap.md) — accepted assessment/original pins, governing research status, rights, test and cost limitations.
-- [Original completed read-only independent #58 report](https://github.com/opensiro/upstream/issues/58#issuecomment-7012239664) — 2026-11-19 full source-linked independent findings.
-- [Previous AG2 2026-11-18 case at 3c4d4ba7f3322670cc8c905f1ccaf9cd31a2eb40](https://github.com/opensiro-contributions/ag2/blob/3c4d4ba7f3322670cc8c905f1ccaf9cd31a2eb40/.opensiro/issues/task-board-coordination-20261118/roadmap.md) — retained in repository history, not a v0.18 verdict.
+- [Human decision and operator context](issue.md)
+- [AI/developer constructor sufficiency contract](constructor-sufficiency.md)
+- [Canonical source-pinned receipt](roadmap.md)
+- [Independent FIRST-PASS checkpoint in Upstream #58](https://github.com/opensiro/upstream/issues/58#issuecomment-7042841496)
+- Historical previous NO_GO is preserved in [immutable commit f33ff627](https://github.com/opensiro-contributions/ag2/blob/f33ff627c9d9b405c914ec78e63fc28d04f96282/.opensiro/issues/task-board-coordination-20261118/roadmap.md), compared only after the new decision was recorded.
 
-**Transfer rationale:** old owner PAUSE/DORMANT prevented fork-local writes. Owner activation on 2026-11-19 changed the matching fork to ACTIVE/ALLOW, permitting internal case synchronization only. Study previously completed; this commit does not rerun it, implement code, claim native tests, change accepted Index vector, or publish public GitHub Issues/PRs.
+**Why changed:** published Upstream v0.18.0 explicitly evaluates architectural `Sx=C` constructibility without using unmeasured benefit, assumed maintainer preference, or an existing native workaround as a sole veto. The old 2026-11-19 rejection of an additional S3 network manager was grounded in lack of proven incremental user need. That finding remains a future product/validation question, not a ban on a coherent S3 construction.
+
+**What this is not:** a shipped S3 actor, Grade C, a decision that AG2 should adopt it, a duplicate narrow one-next wake board, a new GitHub Issue/PR to third parties, or an independently tested/paid-off feature. All native tests are NOT_RUN, costs NOT_MEASURED; only internal fork metadata permitted under ACTIVE / ALLOW.
